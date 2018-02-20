@@ -4,12 +4,12 @@
 # terraform apply -var 'password=PASSWORD' -var 'new_password=NEWPASS'
 
 # CONNECTION PARAMETERS
-raspberrypi_ip = "192.168.1.133"
+raspberrypi_ip = "192.168.1.31"
 username = "pi"
 password = "raspberry"
 
 # CONIGURATION PARAMETERS
-new_hostname = ""
+new_hostname = "raskubemaster"
 new_password = ""
 # Validate timezone correctness against 'timedatectl list-timezones' 
 timezone = "America/New_York"
