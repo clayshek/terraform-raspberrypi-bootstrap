@@ -25,7 +25,7 @@ resource "null_resource" "raspberry_pi_bootstrap" {
       "echo 'pi:${var.new_password}' | sudo chpasswd",
 
       # SYSTEM AND PACKAGE UPDATES
-      "sudo apt-get-update -y",
+      "sudo apt-get update -y",
       "sudo apt-get dist-upgrade -y",
 
       # INSTALL PROMETHEUS NODE EXPORTER
