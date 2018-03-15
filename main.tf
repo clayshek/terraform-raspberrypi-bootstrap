@@ -27,6 +27,11 @@ resource "null_resource" "raspberry_pi_bootstrap" {
       # SYSTEM AND PACKAGE UPDATES
       "sudo apt-get-update -y",
       "sudo apt-get dist-upgrade -y",
+
+      # INSTALL PROMETHEUS NODE EXPORTER
+      # This step optional, comment out this section if not desired
+      "sudo apt-get install prometheus-node-exporter -y",
+      "sudo systemctl enable prometheus-node-exporter.service",
       
       # NETWORKING - SET STATIC IP
       "echo 'interface eth0\nstatic ip_address=${var.static_ip_and_mask}\nstatic routers=${var.static_router}\nstatic domain_name_servers=${var.static_dns}' | cat >> /etc/dhcpcd.conf",

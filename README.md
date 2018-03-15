@@ -3,7 +3,7 @@
 ## Summary
 
 <a href="https://www.terraform.io/">Terraform</a> Provisioner for bootstrapping a <a href="https://www.raspberrypi.org">Raspberry Pi</a> base configuration. This is meant to be a run-once bootstrap Terraform <a href="https://www.terraform.io/docs/provisioners/index.html">provisioner</a> for a vanilla Raspberry Pi. Provisioners by default run only at resource creation, additional runs without cleanup may introduce problems.
-This also copies the k8s_prep.sh script from this repository to /home/pi/ to install & configure prerequisites for Kubernetes, based off of https://gist.github.com/alexellis/fdbc90de7691a1b9edb545c17da2d975. 
+This also installs the Prometheus Node Exporter for Prometheus metrics collection; and also copies the k8s_prep.sh script from this repository to /home/pi/ to install & configure prerequisites for Kubernetes, based off of https://gist.github.com/alexellis/fdbc90de7691a1b9edb545c17da2d975. 
 
 
 ## Requirements
@@ -26,6 +26,7 @@ terraform apply
 
 ## To-Do
 
+ - [X] Add Prometheus Node Exporter install.
  - [ ] Add functionality for multiple Raspberry Pi deployments from a single run.
  - [ ] Implement tests.
 
