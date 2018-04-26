@@ -39,6 +39,9 @@ resource "null_resource" "raspberry_pi_bootstrap" {
       # COPY KUBERNETES PREP SCRIPT
       "curl https://raw.githubusercontent.com/clayshek/terraform-raspberrypi-bootstrap/master/k8s_prep.sh > /home/pi/k8s_prep.sh",
 
+      # OPTIMIZE GPU MEMORY
+      "echo "gpu_mem=16" | sudo tee -a /boot/config.txt",
+
       # REBOOT
       "sudo reboot"
     ]
