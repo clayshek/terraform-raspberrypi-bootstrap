@@ -24,6 +24,7 @@ This also installs the Prometheus Node Exporter for Prometheus metrics collectio
 terraform apply
 ```
 
+- Optional, run <code>./k8s_prep.sh</code> to install Kubernetes and prerequisites, including Docker. 
 
 ## To-Do
 
