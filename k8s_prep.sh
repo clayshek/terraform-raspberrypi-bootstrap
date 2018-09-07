@@ -18,7 +18,7 @@ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 echo Adding " cgroup_enable=cpuset cgroup_memory=1" to /boot/cmdline.txt
 
 sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt
-orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_memory=1"
+orig="$(head -n1 /boot/cmdline.txt) cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1"
 echo $orig | sudo tee /boot/cmdline.txt
 
 echo Please reboot
