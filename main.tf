@@ -26,6 +26,7 @@ resource "null_resource" "raspberry_pi_bootstrap" {
 
       # SYSTEM AND PACKAGE UPDATES
       "sudo apt-get update -y",
+      "sudo apt-get upgrade -y",
       "sudo apt-get dist-upgrade -y",
 
       # INSTALL PROMETHEUS NODE EXPORTER
