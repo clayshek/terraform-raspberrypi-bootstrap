@@ -9,8 +9,8 @@ This also installs the Prometheus Node Exporter for Prometheus metrics collectio
 
 ## Requirements
 
-- <a href="https://www.terraform.io/downloads.html">Terraform</a> (written with v0.11.3, tested working up to 0.11.8)
-- A newly flashed Raspberry Pi (tested with Raspbian Stretch Lite through 2018-06-27 release, should work with prior version Jessie)
+- <a href="https://www.terraform.io/downloads.html">Terraform</a> (written with v0.11.3, tested working up to 0.11.11)
+- A newly flashed Raspberry Pi (tested with Raspbian Stretch Lite through 2018-11-13 release, should work with prior version Jessie)
 - SSH access to Pi, See <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/">Enable SSH on a headless Raspberry Pi</a>
 
 ## Usage
