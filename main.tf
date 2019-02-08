@@ -45,7 +45,9 @@ resource "null_resource" "raspberry_pi_bootstrap" {
       "echo 'gpu_mem=16' | sudo tee -a /boot/config.txt",
 
       # REBOOT
-      "sudo reboot"
+      # Changed from 'sudo reboot' to 'sudo shutdown -r +0' to address exit status issue encountered
+      # after Terraform 0.11.3, see https://github.com/hashicorp/terraform/issues/17844
+      "sudo shutdown -r +0"
     ]
   }
 }
