@@ -28,6 +28,7 @@ resource "null_resource" "raspberry_pi_bootstrap" {
       "sudo apt-get update -y",
       "sudo apt-get upgrade -y",
       "sudo apt-get dist-upgrade -y",
+      "sudo apt --fix-broken install -y",
 
       # INSTALL PROMETHEUS NODE EXPORTER
       # This step optional, comment out this section if not desired
