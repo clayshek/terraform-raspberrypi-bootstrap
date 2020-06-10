@@ -1,5 +1,7 @@
 # terraform-raspberrypi-bootstrap
 
+NOTE: Though still functional, I've replaced this functionality with Ansible and a better provisioning model IMO: https://github.com/clayshek/raspi-ubuntu-ansible
+
 ## Summary
 
 <a href="https://www.terraform.io/">Terraform</a> Provisioner for bootstrapping a <a href="https://www.raspberrypi.org">Raspberry Pi</a> base configuration. This is meant to be a run-once bootstrap Terraform <a href="https://www.terraform.io/docs/provisioners/index.html">provisioner</a> for a vanilla Raspberry Pi. Provisioners by default run only at resource creation, additional runs without cleanup may introduce problems.
